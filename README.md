@@ -1,14 +1,16 @@
-panda
+Panda
 =====
 
 Fido pack for Mac OS X
 
-install
-====
-$ ruby installer.rb
+Install
+-----
 
-run
-===
-$ bin/poll
-$ bin/toss
-$ bin/ge
+    $ ruby installer.rb
+
+Run
+-----
+
+    $ bin/poll
+    $ bin/toss
+    $ bin/ge
