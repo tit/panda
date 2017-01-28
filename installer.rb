@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 require 'fileutils'
-require 'zip/zip'
+require 'zip'
 
 class Configurator
   def initialize(options)
@@ -67,7 +67,7 @@ user_content[:uplink_password] = gets.chomp
 
 FileUtils.mkdir user_content[:base_directory]
 
-Zip::ZipFile.open "#{File.dirname(__FILE__)}/media.zip" do |zip_file|
+Zip::File.open "#{File.dirname(__FILE__)}/media.zip" do |zip_file|
   zip_file.each do |f|
     f_path = File.join user_content[:base_directory], f.name
     dir = File.dirname f_path
